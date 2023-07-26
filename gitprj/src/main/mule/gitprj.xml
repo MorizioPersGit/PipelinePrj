@@ -7,8 +7,15 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
   <http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="1217f954-86d4-4f46-9994-a4bfd795db87" >
     <http:listener-connection host="0.0.0.0" port="8081" />
   </http:listener-config>
+  <http:listener-config name="HTTP_Listener_config3" doc:name="HTTP Listener config" doc:id="b86d7f78-8342-4c9b-9307-85c9e6055f38" >
+    <http:listener-connection host="0.0.0.0" port="8081" />
+  </http:listener-config>
   <flow name="gitprjFlow" doc:id="9c945cc0-ed12-4562-a679-f9462a0c0baf" >
     <http:listener doc:name="Listener" doc:id="3442a902-153b-41d5-9526-99b6256115ea" config-ref="HTTP_Listener_config" path="/test"/>
     <logger level="INFO" doc:name="Logger" doc:id="3cba8ad1-f5e3-4ba2-a602-e12e922035d3" />
+  </flow>
+  <flow name="Fl0owFromAvvale" doc:id="e1671e8e-db99-49f4-916a-cb48fbad260a" >
+    <http:listener doc:name="Listener" doc:id="d97370c3-3580-42f6-b70e-6a19cbad6652" config-ref="HTTP_Listener_config3" path="/avvale"/>
+    <logger level="INFO" doc:name="AVVALE" doc:id="2da0a74e-eb18-4fd0-abff-9559b438c7b6" message="ciao Avvale"/>
   </flow>
 </mule>
