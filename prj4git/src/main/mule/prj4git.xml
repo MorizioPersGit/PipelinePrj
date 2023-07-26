@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+  <http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="61367029-05af-4937-befd-c2bace8213d2" >
+    <http:listener-connection host="0.0.0.0" port="8081" />
+  </http:listener-config>
+  <flow name="prj4gitFlow" doc:id="ce95c984-6872-4b86-b3df-20b70c8493be" >
+    <http:listener doc:name="Listener" doc:id="55e8b5c0-f08a-4030-955a-34104e729f43" config-ref="HTTP_Listener_config" path="/uuu"/>
+    <logger level="INFO" doc:name="Logger" doc:id="fde8d1ab-7e68-43b3-90a0-17f9bb44e0f8" />
+  </flow>
+</mule>
